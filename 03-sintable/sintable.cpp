@@ -11,7 +11,7 @@ int main(int argc, char **argv)
     if (argc < 3)
     {
         std::cout << "Missing arguments" << '\n';
-        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]" << '\n';
+        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]!" << '\n';
         return -1;
     }
     if (!((legal_int(argv[1]) && legal_int(argv[2]))))
