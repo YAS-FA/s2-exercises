@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     if (!((legal_int(argv[1]) && legal_int(argv[2]))))
     {
         std::cout << "Invalid arguments" << '\n';
-        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]" << '\n';
+        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]!" << '\n';
         return -1;
     }
 
