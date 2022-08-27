@@ -12,13 +12,13 @@ int main(int argc, char **argv)
     if (argc < 3)
     {
         std::cout << "Missing arguments" << '\n';
-        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]" << '\n';
+        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]." << '\n';
         return -1;
     }
     if (!((legal_int(argv[1]) && legal_int(argv[2]))))
     {
         std::cout << "Invalid arguments" << '\n';
-        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]" << '\n';
+        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]." << '\n';
         return -1;
     }
     if ((argc > 3) && (argv[3] == std::string("c")))
