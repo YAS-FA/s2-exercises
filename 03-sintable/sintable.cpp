@@ -8,17 +8,24 @@ bool legal_int(char *str);
 
 int main(int argc, char **argv)
 {
+    bool cosin_option = false;
     if (argc < 3)
     {
         std::cout << "Missing arguments" << '\n';
-        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]!" << '\n';
+        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]" << '\n';
         return -1;
     }
     if (!((legal_int(argv[1]) && legal_int(argv[2]))))
     {
         std::cout << "Invalid arguments" << '\n';
-        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]!" << '\n';
+        std::cout << "Enter #samples(positive) #bits(positive) [OPTIONS]" << '\n';
         return -1;
+    }
+    if ((argc > 3) && (argv[3] == std::string("c")))
+    {
+        cosin_option = true;
+    } else {
+        std::cout << "Undefined option is ignored" << '\n';
     }
 
     uint32_t num_of_sample = std::stoi(argv[1]);
@@ -33,10 +40,9 @@ int main(int argc, char **argv)
         int sin_x = int(pos_range * sin(x * coef));
         int cosin_x = int(pos_range * cos(x * coef));
         std::cout << std::setw(10) << std::left << sin_x;
-        if ((argc > 3) && (argv[3] == std::string("c")))
-        {
+        if (cosin_option){
             std::cout << " " << cosin_x;
-        }
+        } 
         std::cout << '\n';
         x++;
     }
