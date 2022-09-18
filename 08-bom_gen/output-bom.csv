@@ -1,0 +1,11 @@
+num,part,count,designators
+1,CT-10uf,2,C5 C23
+2,RES1-10k,2,R1 R5
+3,RES1-3.3k,3,R2 R22 J1
+4,RES1-110,1,R20
+5,RES2-110,1,R21
+6,RES1-8.2k,1,R23
+7,CT-1pf,2,C2 C1
+8,CT-1.2pf,1,C3
+9,CT-10pf,1,C90
+10,NE555,1,U1
