@@ -3,8 +3,6 @@
 #include <sstream>
 #include <vector>
 #include <string>
-#include <stdio.h>
-#include <stdlib.h>
 
 std::string text_suffix = ".txt";
 std::string bin_suffix  = ".bin";
